@@ -1,0 +1,877 @@
+/*
+::-moz-selection {
+	background:rgba(0,0,0,0);
+	}
+::selection { 
+	background:rgba(0,0,0,0);
+	} 	
+*/
+html{
+    scroll-behavior: smooth;
+}
+	
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+img, a {
+	border: none;
+	outline: none;
+}
+a {
+	text-decoration: none !important;
+    cursor: pointer !important;
+}
+ul{
+    margin-bottom: 0px !important;
+}
+ul, li {
+	list-style: none;
+}
+input, textarea, select {
+	outline: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0px !important;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 10px 15px 0;
+}
+.alignright {
+	float: right;
+	margin: 0 0px 15px 10px;
+}
+.aligncenter {
+	display: block;
+	margin: 15px auto;
+}
+.clear:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+.spacer10 {
+	height: 10px;
+}
+.spacer15 {
+	height: 15px;
+}
+.spacer20 {
+	height: 20px;
+}
+.spacer25 {
+	height: 25px;
+}
+.spacer30 {
+	height: 30px;
+}
+.spacer40 {
+	height: 40px;
+}
+.boxSizing {
+	box-sizing: border-box;
+}
+.container {
+	max-width: 100%;
+	margin: 0px auto;
+	position: relative;
+}
+@media (max-width: 575px){
+    .container{
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 576px){
+    .container{
+        max-width: 540px !important;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px !important;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px !important;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px !important;
+    }
+}
+@media (min-width: 1300px){
+    .container{
+        max-width: 1170px !important;
+    }
+}
+@media (min-width: 1400px){
+    .container{
+        max-width: 1300px !important;
+    }
+
+}
+@media (min-width: 1500px){
+    .container{
+        max-width: 1400px !important;
+    }
+
+}
+
+@media (min-width: 1650px){
+    .container{
+        max-width: 1600px !important;
+    }
+
+}
+
+.container:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+/*========================================
+============ Header Css Begin ===========
+==========================================*/
+.main_nav{
+    width: auto;
+}
+._header {
+    padding: 23px 0;
+    position: relative;
+    z-index: 1;
+    background-color: #f0ece5;
+}
+        
+.logo a {
+    color: #fff;
+}
+        
+ navbar {
+    padding: 0;
+}
+        
+.navbar-toggler-icon {
+    height: auto;
+}       
+.navbar-toggler-icon:focus,
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+        
+.navbar-toggler-icon .bar {
+    height: 3px;
+    width: 30px;
+    background: #516887;
+    margin-bottom: 5px;
+}
+        
+.navbar-toggler-icon .bar:last-child {
+    margin-bottom: 0;
+}
+        
+.change .bar-1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+        
+.change .bar-2 {
+    opacity: 0;
+}
+        
+.change .bar-3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -7px);
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+        
+._mob-menu-hdr {
+    display: block;
+    padding: 10px 15px;
+    background: #e0ba6b;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+        
+.navbar-collapse {
+    position: fixed;
+    background: #ceb278;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 2;
+    display: block;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+}
+        
+.navbar-collapse.show {
+    transform: translateX(0%);
+}
+        
+.clickD {
+    background: url(images/down-arrow-white.png) no-repeat;
+    right: 30px;
+    background-size: 15px;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    top: 8px;
+    position: absolute;
+    transition: transform 0.5s;
+}
+        
+.navbar .navbar-nav>li .clickD.toggled {
+    transform: rotate(180deg);
+}
+.left_nav{
+    justify-content: right;
+    float: right;
+}
+        
+.sub-menu {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 99;
+}
+        
+.sub-menu li a {
+    display: block;
+}
+        
+.sub-menu li:not(:last-child) a {
+    border-bottom: 1px dashed #ffffff5e;
+}
+        
+.clickD.toggled~.sub-menu,
+.toggled .sub-menu {
+    display: block;
+    top: 0;
+    background: #1750bb;
+}
+        
+._overHidden {
+    overflow: hidden;
+}
+        
+.navbar .navbar-nav>li {
+    padding: 12px 25px;
+    position: relative;
+    
+}
+        
+.navbar li a {
+    color: #000000;
+    display: block;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom: 3px;
+}
+.navbar li a.active{
+    color: #516887;
+}
+.navbar li a:hover{
+    color: #516887;
+    border-bottom: 1px solid #516887;
+}
+.navbar li a:focus{
+    color: #516887;
+}
+
+.navbar-toggler {
+    padding: 0;
+}
+.navbar{
+    padding: 0px !important;
+}
+.navbar-brand{
+    padding: 0px !important;
+}
+.logo img{
+    width: 100%;
+}
+.collapse ul .login{
+    float: right;
+    padding-left: 130px;
+}
+.login ul li{
+    margin-right: 10px;
+}
+.login ul li:last-child{
+    margin-right: 0px;
+}
+.login ul li:last-child a{
+    border: 2px solid #f7941d !important;
+    color: #f7941d;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    width: 122px;
+}
+.login ul li{
+    float: left;
+}
+.login ul li a {
+	text-decoration: none;
+	text-align: center;
+	border: 2px solid #4c50a1;
+	padding: 10px 35px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'Roboto Cn';
+	text-transform: uppercase;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.login ul li a:hover{
+    color: #fff ;
+}
+.login ul li:last-child a:hover{
+    color: #f7941d ;
+}
+.collapse:not(.show) {
+	display: block !important;
+}
+        
+@media (min-width: 992px) {
+._mob-menu-hdr {
+    display: none;
+}
+.navbar-collapse {
+    position: unset;
+    transform: translate(0);
+    background: transparent;
+    border: none;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+.navbar .navbar-nav>li {
+    border: none;
+}
+.navbar-toggler {
+    display: none;
+}
+.navbar li.menu-item-has-children a {
+    padding-right: 30px;
+}
+.clickD {
+    right: 0;
+    background-size: 12px;
+}
+.sub-menu {
+    position: absolute;
+    display: block;
+    width: 200px;
+    background: #fff;
+    box-shadow: -7.794px 4.5px 20px rgba(17, 79, 160, 0.17);
+    top: 110%;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.sub-menu li {
+    list-style: none;
+}
+.sub-menu li a {
+    color: #000;
+}
+.menu-item-has-children .clickD.toggled ~ .sub-menu {
+    display: block;
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+    background: #fff;
+}
+._header._menu_fixed {
+    position: fixed;
+    z-index: 9999 !important;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    transition: top 0.3s;
+    box-shadow: 0 2px 10px 2px rgba(0,0,0,0.1);
+}
+    
+}
+@media (min-width: 1025px){
+.sub-menu {
+    position: absolute;
+    display: block;
+    width: 200px;
+    background: #fff;
+    box-shadow: -7.794px 4.5px 20px rgba(17, 79, 160, 0.17);
+    top: 110%;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    -ms-transition: all 0.4s;
+}
+.sub-menu li {
+    list-style: none;
+}
+.sub-menu li a {
+    color: #000;
+}
+.menu-item-has-children:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+    
+}
+/*========================================
+============ Header Css End  ===========
+==========================================*/
+
+/*******************************
+    Main Sec Start
+*******************************/
+
+.main_sec{
+    overflow: hidden;
+}
+.main_sec .pl{
+    padding-left: 0px;
+    margin-left: -1px;
+}
+.main_sec .pr{
+    padding-right: 0px;
+}
+.main_sec .top_fullsec{
+    width: 100%;
+}
+.main_sec .top_fullsec.top_gry img{
+    filter: grayscale(100%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.main_sec .top_fullsec.top_gry img:hover{
+    filter: grayscale(0%);
+    transition: 0.5s;
+}
+.main_sec .two_right_sec{
+    width: 47%;
+    float: left;
+    overflow: hidden;
+}
+.main_sec .two_right_sec.color{
+    background-color: #516887;
+    padding-left: 15px;
+    width: 53%;
+    min-height: 417px;
+}
+.main_sec .two_right_sec.color .box_content{
+    overflow: hidden;
+    padding: 72.3px 0px;
+}
+.main_sec .two_right_sec.color .box_content h4{
+    font-size: 35px;
+    color: #ceb278;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    padding-bottom: 10px;
+    width: 95%;
+}
+.main_sec .two_right_sec.color .box_content p{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: 'Jost', sans-serif;
+    padding-bottom: 14px;
+    width: 90%;
+}
+.main_sec .two_right_sec.color .box_content a{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+    text-transform: capitalize;
+    display: none;
+}
+.main_sec .two_right_sec.color:hover .box_content a{
+    display: block;
+}
+.main_sec .two_right_sec.color .box_content a:hover{
+    color: #ceb278;
+    transition: 0.5s;
+}
+.main_sec .two_right_sec .gryscale_img{
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 417px;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    background-position: top;
+}
+.main_sec .two_right_sec .gryscale_img.second{
+    background-position: center left;
+}
+.main_sec .two_right_sec .gryscale_img:hover{
+    filter: grayscale(0%);
+    transition: 0.5s;
+}
+.main_sec .two_right_sec .gryscale_img img{
+    width: 100%;
+    height: 417px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.main_sec .two_right_sec .gryscale_img img:hover{
+    filter: grayscale(0%);
+    transition: 0.5s;
+}
+.main_sec .top_left_big{
+    overflow: hidden;
+}
+.main_sec .top_left_big img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_sec .top_left_big.bw img{
+    filter: grayscale(100%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.main_sec .top_left_big.bw img:hover{
+    filter: grayscale(0%);
+    transition: 0.5s;
+}
+
+.main_sec .top_fullsec .flip {
+  position: relative;
+  cursor: pointer;
+}
+.main_sec .top_fullsec .flip > .front,
+.flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.main_sec .top_fullsec .flip > .front {
+  transform: rotateY(0deg);
+}
+.main_sec .top_fullsec .flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.main_sec .top_fullsec .flip:hover > .front {
+  transform: rotateY(180deg);
+}
+.main_sec .top_fullsec .flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.main_sec .top_fullsec .flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+.main_sec .top_fullsec .flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+.main_sec .top_fullsec .flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+
+.main_sec .top_fullsec .flip {
+    position: relative;
+    width: 100%;
+}
+.main_sec .top_fullsec .flip > .front, .flip > .back {
+	display: block;
+	background-size: cover !important;
+	background-position: center !important;
+	height: auto;
+	padding: 0px;
+	height: 425px;
+}
+
+.main_sec .top_fullsec .flip {
+  position: relative;
+  cursor: pointer;
+}
+.main_sec .top_fullsec .flip > .front,
+.flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.main_sec .top_fullsec .flip > .front {
+  transform: rotateY(0deg);
+}
+.main_sec .top_fullsec .flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.main_sec .top_fullsec .flip:hover > .front {
+  transform: rotateY(180deg);
+}
+.main_sec .top_fullsec .flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.main_sec .top_fullsec .flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+.main_sec .top_fullsec .flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+.main_sec .top_fullsec .flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+
+.main_sec .top_fullsec .flip {
+    position: relative;
+    width: 100%;
+}
+.main_sec .top_fullsec .flip > .front, .flip > .back {
+	display: block;
+	background-size: cover !important;
+	background-position: center !important;
+	height: auto;
+	padding: 0px;
+	height: 425px;
+}
+
+/***************
+    2ND Flip
+****************/
+
+.main_sec .two_right_sec .flip {
+    position: relative;
+    cursor: pointer;
+  }
+  .main_sec .two_right_sec .flip > .front,
+  .flip > .back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 0.5s;
+    transition-property: transform, opacity;
+  }
+  .main_sec .two_right_sec .flip > .front {
+    transform: rotateY(0deg);
+  }
+  .main_sec .two_right_sec .flip > .back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+  }
+  .main_sec .two_right_sec .flip:hover > .front {
+    transform: rotateY(180deg);
+  }
+  .main_sec .two_right_sec .flip:hover > .back {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  .main_sec .two_right_sec .flip.flip-vertical > .back {
+    transform: rotateX(-180deg);
+  }
+  .main_sec .two_right_sec .flip.flip-vertical:hover > .front {
+    transform: rotateX(180deg);
+  }
+  .main_sec .two_right_sec .flip.flip-vertical:hover > .back {
+    transform: rotateX(0deg);
+  }
+  
+  .main_sec .two_right_sec .flip {
+      position: relative;
+      width: 100%;
+  }
+  .main_sec .two_right_sec .flip > .front, .flip > .back {
+      display: block;
+      background-size: cover !important;
+      background-position: center !important;
+      height: auto;
+      padding: 0px;
+      height: 425px;
+  }
+  
+  .main_sec .two_right_sec .flip {
+    position: relative;
+    cursor: pointer;
+  }
+  .main_sec .two_right_sec .flip > .front,
+  .flip > .back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 0.5s;
+    transition-property: transform, opacity;
+  }
+  .main_sec .two_right_sec .flip > .front {
+    transform: rotateY(0deg);
+  }
+  .main_sec .two_right_sec .flip > .back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+  }
+  .main_sec .two_right_sec .flip:hover > .front {
+    transform: rotateY(180deg);
+  }
+  .main_sec .two_right_sec .flip:hover > .back {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  .main_sec .two_right_sec .flip.flip-vertical > .back {
+    transform: rotateX(-180deg);
+  }
+  .main_sec .two_right_sec .flip.flip-vertical:hover > .front {
+    transform: rotateX(180deg);
+  }
+  .main_sec .two_right_sec .flip.flip-vertical:hover > .back {
+    transform: rotateX(0deg);
+  }
+  
+  .main_sec .two_right_sec .flip {
+      position: relative;
+      width: 100%;
+  }
+  .main_sec .two_right_sec .flip > .front, .flip > .back {
+      display: block;
+      background-size: cover !important;
+      background-position: center !important;
+      height: auto;
+      padding: 0px;
+      height: 417px;
+  }
+
+/***************
+    2ND Flip
+****************/
+
+/*******************************
+    Main Sec End
+*******************************/
+
+/*******************************
+    Footer Sec Start
+*******************************/
+
+footer{
+    overflow: hidden;
+    background-color: #425a7c;
+    padding: 38px 0;
+}
+footer .bottom_nav{
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+footer .bottom_nav ul{
+    display: flex;
+    justify-content: center;
+}
+footer .bottom_nav ul li{
+    padding: 0 25px;
+}
+footer .bottom_nav ul li a{
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+footer .bottom_nav ul li a:hover{
+    transition: 0.5s;
+    color: #ceb278;
+}
+footer .copyright{
+    overflow: hidden;
+}
+footer .copyright p{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+}
+footer .copyright p span{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ceb278;
+}
+
+/*******************************
+    Footer Sec End
+*******************************/
+
+
+
+/*****************************
+    Scroll to top css start
+*****************************
+
+.scrollTop {
+	position: fixed;
+	right: 2%;
+	bottom: 10px;
+	padding: 0px;
+	opacity: 0;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+/*****************************
+    Scroll to top css end
+*****************************
+
