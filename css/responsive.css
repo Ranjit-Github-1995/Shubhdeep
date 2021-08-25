@@ -71,6 +71,9 @@
     .main_sec .two_right_sec .flip > .front, .flip > .back{
         height: 463px;
     }
+    .main_sec .top_left_big img{
+        object-fit: fill;
+    }
 
 }
 
@@ -87,6 +90,9 @@
     }
     .main_sec .two_right_sec .flip > .front, .flip > .back{
         height: 463px;
+    }
+    .main_sec .top_left_big img{
+        object-fit: fill;
     }
 
 }
